@@ -151,24 +151,25 @@ public class Game extends JFrame {
 		
 		if(this.isMouseClicked()){
 			timeDelay = 30;
-			if(concentration.numberOfFaceDownCards()==2){
-				if(concentration.doAllFaceUpCardsMatch()){
-			concentration.makeAllFaceUpCardsInvisible();
-				}
-				
-		}
-		concentration.flipAllCardsFaceDown();
-		
-		}
-
-		
-		if(timeDelay>0){
+			if(timeDelay>0){
 			timeDelay--;
 			return;
 		}
+			if(concentration.numberOfFaceDownCards()!=2){
+			if(concentration.doAllFaceUpCardsMatch()){
+			concentration.makeAllFaceUpCardsInvisible();
+		}else{
+		concentration.flipAllCardsFaceDown();
+		}
+		}
 		
-	}	
-	
+		}
+		
+		
+		}
+		
+		
+		
 		
 		
 		
